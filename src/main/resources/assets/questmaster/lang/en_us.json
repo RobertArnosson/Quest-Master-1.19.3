@@ -1,4 +1,8 @@
 {
   "item.questmaster.zircon": "Zircon",
-  "item.questmaster.raw_zircon": "Raw Zircon"
+  "item.questmaster.raw_zircon": "Raw Zircon",
+
+  "block.questmaster.zircon_block": "Zircon Block",
+  "block.questmaster.zircon_ore": "Zircon Ore",
+  "block.questmaster.deepslate_zircon_ore": "Deepslate Zircon Ore"
 }
