@@ -26,14 +26,20 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ZIRCON_BLOCK = registryObject("zircon_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.QUESTMASTER_TAB);
+                    .strength(0.5f).requiresCorrectToolForDrops()), ModCreativeModeTab.QUESTMASTER_TAB);
 
     public static final RegistryObject<Block> ZIRCON_ORE = registryObject("zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.QUESTMASTER_TAB);
+                    .strength(0.4f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.QUESTMASTER_TAB);
     public static final RegistryObject<Block> DEEPSLATE_ZIRCON_ORE = registryObject("deepslate_zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.QUESTMASTER_TAB);
+                    .strength(0.5f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.QUESTMASTER_TAB);
+    public static final RegistryObject<Block> NETHERRACK_ZIRCON_ORE = registryObject("netherrack_zircon_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(0.2f).requiresCorrectToolForDrops(), UniformInt.of(10, 15)), ModCreativeModeTab.QUESTMASTER_TAB);
+    public static final RegistryObject<Block> ENDSTONE_ZIRCON_ORE = registryObject("endstone_zircon_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(0.6f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.QUESTMASTER_TAB);
 
     private static <T extends Block>RegistryObject<T> registryObject(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

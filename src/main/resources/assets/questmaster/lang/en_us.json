@@ -4,5 +4,7 @@
 
   "block.questmaster.zircon_block": "Zircon Block",
   "block.questmaster.zircon_ore": "Zircon Ore",
-  "block.questmaster.deepslate_zircon_ore": "Deepslate Zircon Ore"
+  "block.questmaster.deepslate_zircon_ore": "Deepslate Zircon Ore",
+  "block.questmaster.netherrack_zircon_ore": "Netherrack Zircon Ore",
+  "block.questmaster.endstone_zircon_ore": "Endstone Zircon Ore"
 }
