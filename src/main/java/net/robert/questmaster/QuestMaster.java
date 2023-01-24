@@ -1,6 +1,8 @@
 package net.robert.questmaster;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -52,9 +54,12 @@ public class QuestMaster {
             event.accept(ModItems.EIGHT_BALL);
             event.accept(ModBlocks.JUMPY_BLOCK);
             event.accept(ModBlocks.ZIRCON_LAMP);
+            event.accept(ModItems.BLUEBERRY);
+            event.accept(ModItems.BLUEBERRY_SEEDS);
         }
         if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ZIRCON);
+            event.accept(ModItems.BLUEBERRY_SEEDS);
         }
         if(event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.ZIRCON_BLOCK);
@@ -63,6 +68,9 @@ public class QuestMaster {
             event.accept(ModBlocks.NETHERRACK_ZIRCON_ORE);
             event.accept(ModBlocks.ENDSTONE_ZIRCON_ORE);
         }
+        if(event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.BLUEBERRY);
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -70,7 +78,7 @@ public class QuestMaster {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUEBERRY_CROP.get(), RenderType.cutout());
         }
     }
 }
