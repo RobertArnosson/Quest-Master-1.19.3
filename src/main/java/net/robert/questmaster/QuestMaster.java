@@ -16,6 +16,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.robert.questmaster.block.ModBlocks;
 import net.robert.questmaster.item.ModCreativeModeTab;
 import net.robert.questmaster.item.ModItems;
+import net.robert.questmaster.villager.ModVillagers;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -32,6 +33,8 @@ public class QuestMaster {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModVillagers.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -39,7 +42,9 @@ public class QuestMaster {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {

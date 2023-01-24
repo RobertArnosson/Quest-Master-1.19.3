@@ -13,5 +13,7 @@
   "block.questmaster.blueberry_crop": "Blueberry Crop",
 
   "block.questmaster.jumpy_block": "Jumpy Block",
-  "block.questmaster.zircon_lamp": "Zircon Lamp"
+  "block.questmaster.zircon_lamp": "Zircon Lamp",
+
+  "entity.minecraft.villager.questmaster.jumpy_master": "Jumpy Master"
 }

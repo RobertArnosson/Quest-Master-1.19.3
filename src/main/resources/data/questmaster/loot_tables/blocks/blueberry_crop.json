@@ -2,7 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rools": 1.0,
+      "rolls": 1,
       "bonus_rolls": 0.0,
       "entries": [
         {
@@ -12,7 +12,7 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "conditions": "minecraft:block_state_property",
+                  "condition": "minecraft:block_state_property",
                   "block": "questmaster:blueberry_crop",
                   "properties": {
                     "age": "6"
@@ -30,12 +30,12 @@
       ]
     },
     {
-      "rolls": 1.0,
+      "rolls": 1,
       "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "function": [
+          "functions": [
             {
               "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
@@ -51,7 +51,7 @@
       ],
       "conditions": [
         {
-          "conditions": "minecraft:block_state_property",
+          "condition": "minecraft:block_state_property",
           "block": "questmaster:blueberry_crop",
           "properties": {
             "age": "6"
