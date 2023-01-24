@@ -15,6 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.robert.questmaster.QuestMaster;
 import net.robert.questmaster.block.custom.JumpyBlock;
+import net.robert.questmaster.block.custom.ZirconLampBlock;
 import net.robert.questmaster.item.ModCreativeModeTab;
 import net.robert.questmaster.item.ModItems;
 import org.antlr.v4.codegen.model.SrcOp;
@@ -45,6 +46,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> JUMPY_BLOCK = registryObject("jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0.5f).requiresCorrectToolForDrops()), ModCreativeModeTab.QUESTMASTER_TAB);
+
+    public static final RegistryObject<Block> ZIRCON_LAMP = registryObject("zircon_lamp",
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(0.5f).requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.QUESTMASTER_TAB);
 
     private static <T extends Block>RegistryObject<T> registryObject(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

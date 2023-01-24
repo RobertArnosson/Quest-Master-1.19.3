@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": { "model":  "questmaster:block/zircon_lamp_on" },
+    "lit=false": { "model":  "questmaster:block/zircon_lamp_off" }
+  }
+}
