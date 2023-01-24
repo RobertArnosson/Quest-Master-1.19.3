@@ -14,6 +14,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.robert.questmaster.block.ModBlocks;
 import net.robert.questmaster.item.ModCreativeModeTab;
 import net.robert.questmaster.item.ModItems;
+import net.robert.questmaster.item.custom.EightBallItem;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -49,7 +50,8 @@ public class QuestMaster {
             event.accept(ModBlocks.DEEPSLATE_ZIRCON_ORE);
             event.accept(ModBlocks.NETHERRACK_ZIRCON_ORE);
             event.accept(ModBlocks.ENDSTONE_ZIRCON_ORE);
-
+            event.accept(ModItems.EIGHT_BALL);
+            event.accept(ModBlocks.JUMPY_BLOCK);
         }
         if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ZIRCON);

@@ -14,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.robert.questmaster.QuestMaster;
+import net.robert.questmaster.block.custom.JumpyBlock;
 import net.robert.questmaster.item.ModCreativeModeTab;
 import net.robert.questmaster.item.ModItems;
 import org.antlr.v4.codegen.model.SrcOp;
@@ -40,6 +41,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> ENDSTONE_ZIRCON_ORE = registryObject("endstone_zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0.6f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.QUESTMASTER_TAB);
+
+    public static final RegistryObject<Block> JUMPY_BLOCK = registryObject("jumpy_block",
+            () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(0.5f).requiresCorrectToolForDrops()), ModCreativeModeTab.QUESTMASTER_TAB);
 
     private static <T extends Block>RegistryObject<T> registryObject(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
