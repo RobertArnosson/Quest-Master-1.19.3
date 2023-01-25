@@ -16,6 +16,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.robert.questmaster.block.ModBlocks;
 import net.robert.questmaster.item.ModCreativeModeTab;
 import net.robert.questmaster.item.ModItems;
+import net.robert.questmaster.painting.ModPaintings;
 import net.robert.questmaster.villager.ModVillagers;
 import org.slf4j.Logger;
 
@@ -34,6 +35,7 @@ public class QuestMaster {
         ModBlocks.register(modEventBus);
 
         ModVillagers.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -83,7 +85,6 @@ public class QuestMaster {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUEBERRY_CROP.get(), RenderType.cutout());
         }
     }
 }
